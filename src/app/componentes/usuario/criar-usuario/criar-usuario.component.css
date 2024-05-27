@@ -1,0 +1,36 @@
+.container{
+
+    width: 50rem;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.meioWitdh{
+    width: 50%;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+.section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+   margin-top: .5rem;
+}
+
+mat-icon{
+    opacity: .8;
+}
+

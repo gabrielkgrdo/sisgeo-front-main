@@ -1,0 +1,68 @@
+.card {
+  width: 90%;
+  height: auto;
+  margin: 1rem auto;
+  background-color: rgb(235, 235, 235);
+ }
+
+ .first-card-content {
+  margin-top: 8px; /* Ajuste a margem superior conforme necessário */
+}
+
+.texto-menor {
+   font-size: 20px; /* Tamanho da fonte desejado */
+   margin:auto;
+ }
+
+ /* Substitua #00ff00 pelo código de cor que você deseja usar */
+.registrar-ocorrencia-button{
+   background-color: #00e673;
+   color: black; /* Define a cor do texto para garantir a visibilidade */
+ }
+ 
+ /* Estilize o botão quando ele estiver em estado "hover" (opcional) */
+ .registrar-ocorrencia-button:hover {
+   background-color: #00cc66; /* Cor de realce quando o mouse passa por cima */
+ }
+ 
+
+ .mat-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Usar fr para distribuir o espaço igualmente */
+  grid-gap: 1rem; /* Espaçamento entre os cartões */
+   
+   
+ }
+
+ .card-ocorrencia{
+  min-height: 20rem; /* Altura mínima desejada */
+  max-height: 20rem; /* Altura máxima desejada */
+  text-align: center;
+<<<<<<< HEAD
+  transition: box-shadow 0.3s;
+  
+}
+
+.card-ocorrencia:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.671); /* Sombra quando o mouse passa por cima */
+=======
+  
+>>>>>>> 997ea8cee2f9309616a9cb1cb76e5a19cfa9817c
+}
+
+ .img-ocorrencia {
+   width: 100%; /* Garante que a imagem não exceda a largura do card */
+   height: 13rem; /* Mantém a proporção da imagem */
+   margin: auto; /* Centraliza a imagem vertical e horizontalmente */
+ }
+
+/* //////////////////////////////////////////////////////////////// */
+
+.imgAdmin {
+   height: 30rem;
+}
+
+ 

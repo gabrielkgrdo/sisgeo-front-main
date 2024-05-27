@@ -1,0 +1,24 @@
+<div class="container">
+    <form class="form mat-elevation-z8">
+
+        <h1>SISGEO</h1>
+        <h2>Sistema de gerenciamento de ocorrencias</h2>
+        <img src="assets/img/polices.svg" alt="Imagen login">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input [formControl] = "email" required [(ngModel)]="credenciais.email" name="email" matInput placeholder="Ex. exemplo@mail.com" >
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+      
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input [formControl] = "senha" required [(ngModel)]="credenciais.senha" name="senha" type="password" matInput >
+            <mat-icon matSuffix>password</mat-icon>
+          </mat-form-field>
+
+          <button (click)="logar()" [disabled]="!validaCampos()"  class="full-width" mat-elevation-z4 mat-stroked-button color="primary">Entrar</button>
+          <button (click)="registro()" class="full-width" mat-elevation-z4 mat-stroked-button color="primary">Registrar-se</button>
+
+      </form>
+    
+</div>

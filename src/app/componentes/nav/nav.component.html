@@ -1,0 +1,41 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <img src="assets/img/polices.svg" alt="Imagem de naveção">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item (click)="navigateToAndCheckToken('home')">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+    
+      <a mat-list-item (click)="navigateToAndCheckToken('servidores')"*ngIf="autenticacaoServico.isUserAdmin()">
+        <i class="material-icons">account_circle</i>
+        Servidores
+      </a>
+    
+      <a mat-list-item (click)="navigateToAndCheckToken('usuarios')"*ngIf="autenticacaoServico.isUserAdmin()">
+        <i class="material-icons">person</i>
+        Usuários
+      </a>
+    
+      <a mat-list-item (click)="navigateToAndCheckToken('ocorrencias')" *ngIf="autenticacaoServico.isUserAdmin()">
+        <i class="material-icons">gpp_maybe</i>
+        Ocorrências
+      </a>
+    
+      <a mat-list-item (click)="logout()">
+        <i class="material-icons">logout</i>
+        Sair
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <app-header></app-header>
+    <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>

@@ -1,0 +1,42 @@
+<div class="container">
+  <form class="form mat-elevation-z8">
+
+      <h1>SISGEO</h1>
+      <h2>Sistema de gerenciamento de ocorrencias</h2>
+      <img src="assets/img/polices.svg" alt="Imagen login">
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input [(ngModel)]="usuario.nome" name="nome" [formControl]="nome" required matInput maxlength="50">
+        <mat-icon matSuffix>badge</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input [(ngModel)]="usuario.cpf" name="cpf" [formControl]="cpf" required matInput mask="000.000.000-00">
+        <mat-icon matSuffix>pin</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input [(ngModel)]="usuario.email" name="email" [formControl]="email" required matInput>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+    
+      <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input [(ngModel)]="usuario.senha" name="senha" type="password" [formControl]="senha" required matInput >
+          <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+
+      <section class="section">
+          <p>Selecione o Perfil:</p>
+          <mat-checkbox (click)="addPerfil(1)" class="margin" color="primary" >Usuário</mat-checkbox>
+          
+      </section>
+
+        <button (click)="create()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-flat-button color="primary">Registrar-se</button>
+        <button routerLink="/login" class="full-width mat-elevation-z4" mat-flat-button color="warn">Cancelar</button>
+    </form>
+  
+</div>

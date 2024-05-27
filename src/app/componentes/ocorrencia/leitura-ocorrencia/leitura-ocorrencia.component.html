@@ -1,0 +1,61 @@
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Ocorrência</h1>
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Título da ocorrência</mat-label>
+          <input  disabled="true" [(ngModel)]="ocorrencia.titulo" name="titulo"matInput >
+        </mat-form-field>
+
+        <div class="status-prioridade">
+            <mat-form-field appearance="outline">
+                <mat-label>STATUS ({{retornaStatus(ocorrencia.status)}})</mat-label>
+                <mat-select  disabled="true" [(ngModel)]="ocorrencia.status" name="status" >
+                  <mat-option value="0">ABERTO</mat-option>
+                  <mat-option value="1">EM ANDAMENTO</mat-option>
+                  <mat-option value="2">ENCERRADO</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>PRIORIDADE ({{retornaPrioridade(ocorrencia.prioridade)}})</mat-label>
+                <mat-select disabled="true" [(ngModel)]="ocorrencia.prioridade" name="prioridade">
+                  <mat-option value="0">BAIXA</mat-option>
+                  <mat-option value="1">MÉDIA</mat-option>
+                  <mat-option value="2">ALTA</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+
+        <div class="servidor-Usuario">
+            <mat-form-field appearance="outline">
+                <mat-label>SERVIDOR ({{ocorrencia.nomeServidor}})</mat-label>
+                <mat-select disabled="true" [(ngModel)]="ocorrencia.servidor" name="servidor">
+                  <mat-option>{{ ocorrencia.nomeServidor }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>USUÁRIO ({{ocorrencia.nomeUsuario}})</mat-label>
+                <mat-select disabled="true" [(ngModel)]="ocorrencia.usuario" name="usuario">
+                  <mat-option>{{ ocorrencia.nomeUsuario }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+        </div>
+
+        <div class="desc">
+            <form class="form">
+            
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Descrição</mat-label>
+                  <textarea disabled="true" [(ngModel)]="ocorrencia.descricaoOcorrencia" name="descricao" matInput></textarea>
+                </mat-form-field>
+              </form>
+              <div class="botoes">
+              <button routerLink="../../" class="botao mat-elevation-z4" mat-raised-button color="warn">Voltar</button>
+              </div>
+        </div>
+      
+      </form>
+      
+</div>
